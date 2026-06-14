@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://liqk2014.github.io/gearsignal
+Sitemap: https://liqk2014.github.io/gearsignal/sitemap.xml
