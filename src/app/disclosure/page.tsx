@@ -32,9 +32,8 @@ export default function DisclosurePage() {
         <div className="prose mt-8">
           <p>
             Some outbound links on GearSignal may become monetized through
-            Amazon, PartnerBoost, or another approved affiliate program. We
-            disclose that relationship near the top of review and shortlist
-            pages.
+            Amazon or another affiliate program. We disclose that relationship
+            near the top of review and shortlist pages.
           </p>
           <p>
             The stronger rule is editorial independence: verdicts should be

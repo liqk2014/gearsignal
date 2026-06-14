@@ -29,12 +29,12 @@ export function CtaCard({
   return (
     <section
       className={cn(
-        "surface rounded-lg border-accent/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(238,244,241,0.92))] p-6",
+        "surface rounded-lg border-accent/30 bg-paper-strong p-6",
         compact ? "space-y-4" : "space-y-5",
         className,
       )}
     >
-      <p className="text-xs uppercase text-accent">{eyebrow}</p>
+      <p className="text-xs font-bold uppercase text-accent">{eyebrow}</p>
       <div className="space-y-2">
         <h3 className="font-serif text-2xl font-semibold text-foreground">
           {title}

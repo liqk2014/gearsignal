@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f8f7;
-  --foreground: #111918;
-  --paper: rgba(255, 255, 255, 0.88);
+  --background: #f4f6f8;
+  --foreground: #101114;
+  --paper: rgba(255, 255, 255, 0.94);
   --paper-strong: #ffffff;
-  --line: rgba(17, 25, 24, 0.12);
-  --muted: #596765;
-  --accent: #0b6b63;
-  --accent-soft: #dbeae7;
-  --accent-ink: #f6fffd;
-  --sage: #eef4f1;
+  --line: rgba(16, 17, 20, 0.14);
+  --muted: #636873;
+  --accent: #e14f35;
+  --accent-soft: #ffe5dc;
+  --accent-ink: #ffffff;
+  --blue: #2558d4;
+  --blue-soft: #e3ecff;
+  --green: #147a57;
+  --green-soft: #ddf2e8;
+  --amber: #b77912;
+  --amber-soft: #fff2cf;
+  --slab: #20242b;
 }
 
 @theme inline {
@@ -23,7 +29,13 @@
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-accent-ink: var(--accent-ink);
-  --color-sage: var(--sage);
+  --color-blue: var(--blue);
+  --color-blue-soft: var(--blue-soft);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-slab: var(--slab);
   --font-sans: var(--font-manrope);
   --font-serif: var(--font-fraunces);
 }
@@ -38,7 +50,7 @@ html {
 
 body {
   min-height: 100vh;
-  background: linear-gradient(180deg, #fbfcfb 0%, #f4f7f6 48%, #eef3f1 100%);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-manrope), sans-serif;
 }
@@ -51,18 +63,63 @@ a {
 }
 
 ::selection {
-  background: rgba(166, 79, 47, 0.18);
+  background: rgba(225, 79, 53, 0.2);
 }
 
 .surface {
   border: 1px solid var(--line);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.96),
-    rgba(248, 251, 250, 0.9)
-  );
-  box-shadow: 0 16px 44px rgba(17, 25, 24, 0.08);
-  backdrop-filter: blur(12px);
+  background: var(--paper);
+  box-shadow: 0 16px 30px rgba(16, 17, 20, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.editorial-label {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  background: var(--paper-strong);
+  padding: 0.35rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+.commerce-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.commerce-table th,
+.commerce-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.commerce-table th {
+  background: rgba(255, 255, 255, 0.74);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.commerce-table td {
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.commerce-table tbody tr:hover td {
+  background: #ffffff;
+}
+
+.commerce-table tr:last-child td {
+  border-bottom: 0;
 }
 
 .prose {
@@ -143,11 +200,11 @@ a {
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--line);
-  border-radius: 1.25rem;
+  border-radius: 0.5rem;
 }
 
 .prose thead {
-  background: rgba(218, 227, 212, 0.4);
+  background: rgba(255, 229, 220, 0.5);
 }
 
 .prose th,
@@ -163,7 +220,7 @@ a {
 }
 
 .prose code {
-  border-radius: 999px;
+  border-radius: 0.35rem;
   background: rgba(22, 32, 25, 0.06);
   padding: 0.15rem 0.55rem;
   font-size: 0.92em;

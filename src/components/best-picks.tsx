@@ -9,35 +9,34 @@ type BestPicksProps = {
 
 export function BestPicks({ picks }: BestPicksProps) {
   return (
-    <section className="space-y-4">
+    <section className="overflow-hidden rounded-lg border border-line bg-line">
       {picks.map((pick, index) => {
         const isExternal = pick.href.startsWith("http");
         const label = `#${index + 1} ${pick.name}`;
 
         return (
-          <article className="surface rounded-lg p-5" key={pick.name}>
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase text-accent">
+          <article
+            className="grid gap-4 border-b border-line bg-paper-strong p-5 last:border-b-0 md:grid-cols-[8rem_minmax(0,1fr)_9rem]"
+            key={pick.name}
+          >
+            <div>
+              <span className="inline-flex rounded-md bg-foreground px-3 py-1 text-xs font-bold uppercase text-paper-strong">
                 {pick.label}
               </span>
-              {pick.note ? (
-                <span className="text-xs uppercase text-muted">
-                  {pick.note}
-                </span>
-              ) : null}
+              {pick.note ? <p className="mt-3 text-xs font-bold uppercase text-muted">{pick.note}</p> : null}
             </div>
 
-            <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-              <div className="space-y-2">
-                <h3 className="font-serif text-2xl font-semibold text-foreground">
-                  {label}
-                </h3>
-                <p className="max-w-2xl text-sm leading-7 text-muted">{pick.summary}</p>
-              </div>
+            <div className="space-y-2">
+              <h3 className="font-serif text-2xl font-semibold text-foreground">
+                {label}
+              </h3>
+              <p className="max-w-2xl text-sm leading-7 text-muted">{pick.summary}</p>
+            </div>
 
+            <div className="flex items-center md:justify-end">
               {isExternal ? (
                 <a
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-foreground transition hover:text-accent"
+                  className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-3 text-sm font-bold text-accent-ink transition hover:bg-foreground"
                   href={pick.href}
                   rel="noreferrer"
                   target="_blank"
@@ -47,7 +46,7 @@ export function BestPicks({ picks }: BestPicksProps) {
                 </a>
               ) : (
                 <Link
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-foreground transition hover:text-accent"
+                  className="inline-flex items-center gap-2 rounded-md bg-foreground px-4 py-3 text-sm font-bold text-paper-strong transition hover:bg-accent"
                   href={pick.href}
                 >
                   Read review

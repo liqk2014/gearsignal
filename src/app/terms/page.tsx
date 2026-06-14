@@ -43,7 +43,7 @@ export default function TermsPage() {
           <h2>Affiliate relationships</h2>
           <p>
             GearSignal may earn commissions from qualifying purchases through
-            Amazon, PartnerBoost, or other approved affiliate programs. These
+            Amazon or other approved affiliate programs. These
             relationships are disclosed on the site and should not remove the
             need for independent product judgment.
           </p>

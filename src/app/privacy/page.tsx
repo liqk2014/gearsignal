@@ -43,10 +43,9 @@ export default function PrivacyPage() {
           </p>
           <h2>Affiliate and outbound links</h2>
           <p>
-            Some outbound links may route to Amazon, PartnerBoost merchants, or
+            Some outbound links may route to Amazon, retailer product pages, or
             other affiliate partners. Those third-party sites may use cookies,
-            tracking parameters, or similar technologies under their own
-            policies.
+            tracking parameters, or similar technologies under their own policies.
           </p>
           <h2>How we use information</h2>
           <p>
