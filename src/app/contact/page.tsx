@@ -46,7 +46,9 @@ export default function ContactPage() {
                 Email
               </h2>
               <p className="mt-2 text-sm leading-7 text-muted">
-                partnerships@gearsignal.co
+                Use the publisher contact email submitted with the affiliate
+                network application. A domain inbox can be added after a custom
+                domain is connected.
               </p>
             </div>
             <div className="rounded-lg border border-line bg-paper-strong p-5">

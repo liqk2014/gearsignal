@@ -63,7 +63,8 @@ export default function PrivacyPage() {
           </p>
           <h2>Contact</h2>
           <p>
-            Privacy questions can be sent to partnerships@gearsignal.co.
+            Privacy questions should be sent through the publisher contact
+            email submitted with the affiliate network application.
           </p>
         </div>
       </article>
