@@ -67,23 +67,26 @@ export function ReviewCard({ review }: ReviewCardProps) {
           </p>
         </div>
 
-        <div className="mt-auto flex items-center justify-between gap-4 border-t border-line pt-4 text-sm text-muted">
-          <span>Updated {formatDate(review.updatedDate)}</span>
-          <div className="flex items-center gap-3">
-            <Link className="transition hover:text-accent" href={`/reviews/${review.slug}`}>
-              <span className="inline-flex items-center gap-2 font-bold text-foreground transition hover:text-accent">
-                Review
-                <ArrowRight className="h-4 w-4" />
-              </span>
+        <div className="mt-auto border-t border-line pt-4">
+          <p className="text-xs font-semibold uppercase text-muted">
+            Updated {formatDate(review.updatedDate)}
+          </p>
+          <div className="mt-3 grid grid-cols-2 gap-2">
+            <Link
+              className="inline-flex min-w-0 items-center justify-center gap-2 rounded-md border border-line bg-paper-strong px-3 py-2 text-sm font-bold text-foreground transition hover:border-foreground"
+              href={`/reviews/${review.slug}`}
+            >
+              Review
+              <ArrowRight className="h-4 w-4 shrink-0" />
             </Link>
             <a
-              className="inline-flex items-center gap-2 font-bold text-blue transition hover:text-accent"
+              className="inline-flex min-w-0 items-center justify-center gap-2 rounded-md bg-blue-soft px-3 py-2 text-sm font-bold text-blue transition hover:bg-accent-soft hover:text-foreground"
               href={review.affiliateHref}
               rel="noreferrer"
               target="_blank"
             >
               Product
-              <ArrowUpRight className="h-4 w-4" />
+              <ArrowUpRight className="h-4 w-4 shrink-0" />
             </a>
           </div>
         </div>
